@@ -1,9 +1,9 @@
 const axios = require("axios");
-const { lasTokenPriceQuery } = require("../bitquery/queries");
+const { lastTokenPriceQuery } = require("../bitquery/queries");
 
 const getLastTokenPrice = async (base, quote) => {
   const { data } = await axios.post("https://graphql.bitquery.io", {
-    query: lasTokenPriceQuery,
+    query: lastTokenPriceQuery,
     variables: {
       base,
       quote

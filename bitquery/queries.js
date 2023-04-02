@@ -1,4 +1,4 @@
-const lasTokenPriceQuery = `query getLastokenPrice($base: String!, $quote: String!) {
+const lastTokenPriceQuery = `query getLastokenPrice($base: String!, $quote: String!) {
   ethereum(network: bsc) {
     dexTrades(
       options: {limit: 10 desc: "block.timestamp.unixtime"}
@@ -17,5 +17,5 @@ const lasTokenPriceQuery = `query getLastokenPrice($base: String!, $quote: Strin
 `
 
 module.exports = {
-  lasTokenPriceQuery
+  lastTokenPriceQuery
 };
